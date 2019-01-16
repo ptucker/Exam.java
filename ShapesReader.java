@@ -19,28 +19,28 @@ public class ShapesReader extends DefaultHandler {
 
 
 //method that checks first words of the xml file 
-    public void Element1 (String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement (String namespaceURI, String localName, String qName, Attributes atts)
     {
         if(localName.equals("circle")) 
         {
             Circle c = new Circle();
-            c.Kind = atts.getValue("shape");
+            c.Kind = atts.getValue("id");
             circle.add(c);
         }
         else if ( localName.equals("rectangle"))
         {
             Rectangle r = new Rectangle();
-            r.Kind = atts.getValue("shape");
+            r.Kind = atts.getValue("id");
         }
         else if ( localName.equals("square"))
         {
             Square s = new Square();
-            s.Kind = atts.getValue("shape");
+            s.Kind = atts.getValue("id");
         }
         else if ( localName.equals("triangle"))
         {
             Triangle t = new Triangle();
-            t.Kind = atts.getValue("shape");
+            t.Kind = atts.getValue("id");
         }
     }
 
