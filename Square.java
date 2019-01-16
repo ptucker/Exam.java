@@ -5,8 +5,8 @@
 */
 public class Square implements Shape {
     public String Kind;
-    public int ID;
-    public int side;
+    public String ID;
+    public String side;
     public String color;
    
    
