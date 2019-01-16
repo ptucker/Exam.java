@@ -9,7 +9,7 @@ public class ShapesReader extends DefaultHandler {
    private ArrayList<Rectangle> rectangle = new ArrayList <Rectangle> ();
    private ArrayList<Square> square = new ArrayList <Square> ();
    private ArrayList<Triangle> triangle = new ArrayList <Triangle> ();
-    
+   private String chars; 
    private Shape currentShape;
 
     public ArrayList<Circle> getCircle() {return circle;}
@@ -18,31 +18,47 @@ public class ShapesReader extends DefaultHandler {
     public ArrayList<Triangle> getTriangle() {return triangle;}
 
 
-//method that checks first words of the xml file 
+//method that checks for particular words in sml file and assigns them to values
     public void startElement (String namespaceURI, String localName, String qName, Attributes atts)
     {
         if(localName.equals("circle")) 
         {
             Circle c = new Circle();
-            c.Kind = atts.getValue("id");
+            c.ID = atts.getValue("id");
+            c.radius = atts.getValue("radius");
+            c.color = atts.getValue("color");
             circle.add(c);
         }
-        else if ( localName.equals("rectangle"))
-        {
-            Rectangle r = new Rectangle();
-            r.Kind = atts.getValue("id");
-        }
-        else if ( localName.equals("square"))
+
+        if (localName.equals("square"))
         {
             Square s = new Square();
-            s.Kind = atts.getValue("id");
+            s.ID = atts.getValue("id");
+            s.side = atts.getValue("side");
+            s.color = atts.getValue("color");
+            square.add(s);
         }
-        else if ( localName.equals("triangle"))
+
+        if (localName.equals("rectangle"))
+        {
+            Rectangle r = new Rectangle();
+            r.ID = atts.getValue("id");
+            r.width = atts.getValue("width");
+            r.length = atts.getValue("length");
+            r.color = atts.getValue("color");
+            rectangle.add(r);
+        }
+        if (localName.equals("triangle"))
         {
             Triangle t = new Triangle();
-            t.Kind = atts.getValue("id");
+            t.ID = atts.getValue("id");
+            t.side1 = atts.getValue("side1");
+            t.side2 = atts.getValue("side2");
+            t.side3 = atts.getValue("side3");
+            t.color = atts.getValue("color");
+            triangle.add(t);
         }
+        
     }
-
 
 }
