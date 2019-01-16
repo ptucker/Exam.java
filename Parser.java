@@ -19,26 +19,35 @@ public class Parser {
         ArrayList<Circle> ac = noterdr.getCircle();
         for (Circle c: ac)
         {
-            System.out.printf("%s\n", c.Kind);
+            System.out.printf(" Circle ID: %s, radius: %s, color: %s \n", c.ID,c.radius, c.color);
         }
-        ArrayList<Rectangle> ar = noterdr.getRectangle();
-        for (Rectangle r: ar)
-        {
-            System.out.printf("%s\n", r.Kind);
-        }
+
         ArrayList<Square> as = noterdr.getSquare();
         for (Square s: as)
         {
-            System.out.printf("%s\n", s.Kind);
+            System.out.printf("Square ID: %S, side: %s, color: %s \n", s.ID,s.side,s.color);
         }
-        ArrayList<Triangle> at = noterdr.getTriangle();
-        for (Triangle t: at)
+
+        ArrayList<Rectangle> ar = noterdr.getRectangle();
+        for (Rectangle r: ar)
         {
-            System.out.printf("%s\n", t.Kind);
+            System.out.printf("Rectangle ID: %s, length: %s, width: %s, color: %s \n",r.ID,r.length,r.width,r.color);
         }
+
+        ArrayList<Triangle> at = noterdr.getTriangle();
+        for (Triangle t:at)
+        {
+            System.out.printf("Triangle ID: %s, side1: %s, side2: %s, side3: %s, color: %s \n", t.ID, t.side1,t.side2, t.side3, t.color);
+        }
+
 
           } 
 
         catch (Exception ex) { System.out.printf("Failed ");}
+
+//rest of code 
+
+
+
     }
 }
