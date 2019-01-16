@@ -5,10 +5,10 @@
 */
 public class Rectangle implements Shape {
     public String Kind;
-    public int ID;
-    public int width;
+    public String ID;
+    public String width;
     public String color;
-    public int length;
+    public String length;
 
     
     public String toString()
