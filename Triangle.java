@@ -5,10 +5,10 @@
 */
 public class Triangle implements Shape {
     public String Kind;
-    public int ID;
-    public int side1;
-    public int side2;
-    public int side3;
+    public String ID;
+    public String side1;
+    public String side2;
+    public String side3;
     public String color;
   
   
