@@ -1,3 +1,20 @@
+/*
+FEEDBACK
+
+Read from the file correctly: 15/20%
+Implement class hierarchy correctly: 20/20%
+Populate appropriate data structures with shape data: 15/15%
+Show list of shapes correctly: 5/15%
+Show specific shape properties correctly: 5/15%
+Well-structured, well-commented code: 10/15%
+
+
+Comments:
+  You have buttons named btnCityHall and btnSchool.
+  Need to display the shapes defined in the file, not hardcoded.
+  you don't need to define toString in Shape since it's defined on Object
+*/
+
 /**
 * This is the main class that implements the java app
 * @author Karen Sobtafo
